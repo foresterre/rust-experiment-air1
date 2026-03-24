@@ -1,3 +1,18 @@
 [workspace]
 resolver = "3"
-members = ["experiment_001_air1", "experiment_002_air2", "experiment_003_air3"]
+members = [
+    "experiment_001_air1",
+    "experiment_002_air2",
+    "experiment_003_air3",
+    "experiment_004/tmain",
+    "experiment_004/tmonitor",
+    "experiment_004/trunner",
+]
+
+[workspace.dependencies]
+serde = "1.0.228"
+serde_json = "1.0.149"
+tokio = { version = "1.50.0", features = ["full"] }
+thiserror = "2.0.18"
+tracing = "0.1.44"
+tracing-subscriber = "0.3.23"
